@@ -23,6 +23,7 @@ const config = {
         "black-50": "#121212",
         "black-100": "#171717",
         "black-200": "#242424",
+        "black-300": "#323232",
         // paleta de cores principal sunset orange
         "sunset-50": "#fef3f2",
         "sunset-100": "#fee3e2",
