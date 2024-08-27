@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 
-import techrestLogo from "../assets/techrest-logo.svg";
+import techrestLogo from "../../assets/techrest-logo.svg";
 import Link from "next/link";
 
 interface HeaderProps {}
