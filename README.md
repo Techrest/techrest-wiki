@@ -1,2 +1,2 @@
-# Techrest Wik
+# Techrest Wiki
 Em desenvolvimento...
