@@ -19,6 +19,23 @@ const config = {
     },
     extend: {
       colors: {
+        // padrão de cores da techrest
+        "black-50": "#121212",
+        "black-100": "#171717",
+        "black-200": "#242424",
+        // paleta de cores principal sunset orange
+        "sunset-50": "#fef3f2",
+        "sunset-100": "#fee3e2",
+        "sunset-200": "#ffccc9",
+        "sunset-300": "#fda9a4",
+        "sunset-400": "#f97770",
+        "sunset-500": "#f25c54",
+        "sunset-600": "#de2d24",
+        "sunset-700": "#bb221a",
+        "sunset-800": "#9a201a",
+        "sunset-900": "#80211c",
+        "sunset-950": "#460c09",
+        // configurações e cores do shadcn/ui
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
