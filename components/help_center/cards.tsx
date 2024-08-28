@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import penIcon from "../../app/assets/pen.svg";
-import userHeart from "../../app/assets/userHeart.svg";
+import penIcon from "../../assets/icons/pen.svg";
+import userHeart from "../../assets/icons/userHeart.svg";
 
 import React from "react";
 
