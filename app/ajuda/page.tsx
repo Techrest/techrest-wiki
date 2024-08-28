@@ -18,8 +18,8 @@ export default function Ajuda({}: AjudaProps) {
   return (
     <>
       <Header />
-      <main className="flex flex-col m-16 text-white gap-10">
-        <section className="flex flex-col gap-5">
+      <main className="flex flex-col m-16 text-white gap-10 ">
+        <section className="flex flex-col gap-5 sm:m-1">
           <h1 className=" text-4xl">Ajuda</h1>
           <p className="text-white/50 text-start text-lg">
             Aqui você encontrará respostas rápidas e soluções eficazes para as
@@ -119,7 +119,7 @@ export default function Ajuda({}: AjudaProps) {
             </div>
           </section>
         </section>
-        <section className="flex  text-white m-6 gap-10">
+        <section className="flex flex-col text-white m-e gap-5 md:flex-row md:gap-10 md:m-6 ">
           <section className="flex flex-col justify-between gap-5 max-w-80 p-6 border-2 border-black-300 rounded-md bg-black">
             <h1 className="text-xl">Abertura de solicitação</h1>
             <p className="text-white/50">
