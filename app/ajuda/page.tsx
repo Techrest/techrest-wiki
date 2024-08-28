@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Header from "../components/header";
+import Header from "../../components/header";
 
 import Faq from "@/components/help_center/faq";
 import Cards from "@/components/help_center/cards";
