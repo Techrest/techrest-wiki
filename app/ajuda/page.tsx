@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Header from "../components/header";
 
-import Image from "next/image";
 import Faq from "@/components/help_center/faq";
 import Cards from "@/components/help_center/cards";
+import Intro from "@/components/help_center/intro";
 
 /**
  * Renders the help page.
@@ -13,28 +13,19 @@ import Cards from "@/components/help_center/cards";
  * @returns The rendered Ajuda component.
  */
 export default function Ajuda() {
-  const [openSocialHelp, setOpenSocialHelp] = useState(true);
-  const [openPasswordlHelp, setOpenPasswordlHelp] = useState(true);
-  const [openEmailHelp, setOpenEmailHelp] = useState(true);
-
   return (
     <React.Fragment>
       <Header />
 
       {/* Seção principal da página */}
-      <main className="max-w-[1440px] mx-auto flex flex-col m-16 text-white gap-10 ">
+      <main className="max-w-[1440px] mx-auto flex flex-col m-8 text-white gap-10 px-4">
         {/* Seção de introdução do tema abordado na página */}
-        <section>
-          <div>
-            <h1 className="font-manrope font-bold text-4xl leading-normal">
-              Central de Ajuda
-            </h1>
-          </div>
-        </section>
+        <Intro pageTitle="Central de Ajuda" />
 
         {/* Seção de dúvidas frequentes */}
         <Faq />
 
+        {/* Seção de cards interativos */}
         <Cards />
       </main>
     </React.Fragment>
