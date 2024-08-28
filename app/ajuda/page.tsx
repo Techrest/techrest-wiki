@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Header from "../../components/header";
 
 import Faq from "@/components/help_center/faq";
 import Cards from "@/components/help_center/cards";
-import Intro from "@/components/help_center/intro";
+import Intro from "@/components/intro";
 
 /**
  * Renders the help page.
