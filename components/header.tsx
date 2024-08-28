@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 
-import techrestLogo from "../../assets/techrest-logo.svg";
+import techrestLogo from "../assets/techrest-logo.svg";
 import Link from "next/link";
 
 interface HeaderProps {}
@@ -17,7 +17,7 @@ export default function Header({}: HeaderProps) {
           alt="Techrest Logo"
           className="h-auto leading-none"
         />
-        <nav>
+        <nav className="hidden md:inline">
           <ul className="flex justify-center items-center gap-4 leading-none">
             <Link href="/docs">
               <li className="text-white/50 text-sm hover:text-white transition-all duration-200">
