@@ -1,6 +1,6 @@
 import GitHubBtn from "@/components/GitHubBtn";
 import React from "react";
-import Header from "../components/header";
+import Header from "../../components/header";
 import locker from "../../assets/icons/locker.svg";
 import Image from "next/image";
 import git from "../../assets/icons/github.svg";
