@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        manrope: ["Manrope", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
       colors: {
         // padrão de cores da techrest
         "black-50": "#121212",
