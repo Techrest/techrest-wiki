@@ -1,4 +1,3 @@
-import GitHubBtn from "@/components/GitHubBtn";
 import React from "react";
 import Header from "../../components/header";
 import locker from "../../assets/icons/locker.svg";
