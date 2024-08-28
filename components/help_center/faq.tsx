@@ -7,12 +7,12 @@ import {
 
 export default function Faq() {
   return (
-    <section className="flex flex-col justify-center items-center md:items-start gap-6 text-center md:text-left px-4 md:px-0">
+    <section className="flex flex-col justify-center items-center md:items-start gap-6 text-center md:text-left">
       <div>
-        <h1 className="font-manrope text-2xl leading-normal text-white font-bold">
+        <h1 className="font-manrope text-2xl leading-normal text-white font-bold text-left">
           Dúvidas Frequentes
         </h1>
-        <p className="font-inter font-normal tracking-[-0.0225rem] leading-normal text-white/50 text-base">
+        <p className="font-inter font-normal tracking-[-0.0225rem] leading-normal text-white/50 text-base text-left">
           Antes de realizar uma abertura de chamado no suporte, verifique se a
           sua dúvida está nesta seção.
         </p>

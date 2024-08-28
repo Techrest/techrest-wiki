@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import penIcon from "../../app/assets/pen.svg";
 import userHeart from "../../app/assets/userHeart.svg";
+
 import React from "react";
 
 export default function Cards() {
@@ -35,7 +36,7 @@ export default function Cards() {
     },
   ];
   return (
-    <section className="flex flex-col gap-4 md:flex-row md:gap-4 text-white w-full px-4 md:mt-16 mt-8">
+    <section className="flex flex-col gap-4 md:flex-row md:gap-4 text-white w-full md:mt-16 mt-8">
       {data.map((card) => (
         <React.Fragment key={card.id}>
           {/* Cartão */}
