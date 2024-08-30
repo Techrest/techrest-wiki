@@ -18,6 +18,8 @@ interface ButtonProps {
   linkStyle?: string;
 
   width?: string;
+  maxWidth?: string;
+  minWidth?: string;
 
   text?: string;
   textStyle?: string;
@@ -40,13 +42,15 @@ export default function Button({
   icon = false,
   iconPosition = "left",
   iconSrc,
-  width = "22.3125rem",
+  width = "full",
+  maxWidth = "22.3125rem",
+  minWidth = "22.3125rem",
 }: ButtonProps) {
   return (
     <React.Fragment>
       {(variant === "primary" && (
         <button
-          className={`px-4 py-3 w-full lg:min-w-[${width}] h-auto rounded-lg bg-white hover:bg-white/80 transition-all duration-200 ${primaryStyle}`}
+          className={`px-4 py-3 w-[${width}] lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg bg-white hover:bg-white/80 transition-all duration-200 ${primaryStyle}`}
         >
           {icon === true ? (
             <React.Fragment>
@@ -83,7 +87,7 @@ export default function Button({
       )) ||
         (variant === "secondary" && (
           <button
-            className={`px-4 py-3 w-full lg:min-w-[${width}] h-auto rounded-lg bg-sunset-500 hover:bg-sunset-400 fill-white text-white transition-all duration-200 ${secondaryStyle}`}
+            className={`px-4 py-3 w-[${width}] lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg bg-sunset-500 hover:bg-sunset-400 fill-white text-white transition-all duration-200 ${secondaryStyle}`}
           >
             {icon === true ? (
               <React.Fragment>
@@ -120,7 +124,7 @@ export default function Button({
         )) ||
         (variant === "outline" && (
           <button
-            className={`px-4 py-3 w-full lg:min-w-[${width}] h-auto rounded-lg border border-white hover:bg-white hover:text-black-500 group hover:fill-black-50 transition-all duration-200 ${secondaryStyle}`}
+            className={`px-4 py-3 w-[${width}] lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg border border-white hover:bg-white hover:text-black-500 group hover:fill-black-50 transition-all duration-200 ${secondaryStyle}`}
           >
             {icon === true ? (
               <React.Fragment>
