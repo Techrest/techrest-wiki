@@ -1,9 +1,5 @@
-import Image from "next/image";
-
-import penIcon from "../../assets/icons/pen.svg";
-import userHeart from "../../assets/icons/userHeart.svg";
-
 import React from "react";
+import { Cog8ToothIcon } from "@heroicons/react/16/solid";
 
 export default function Cards() {
   const data = [
@@ -11,10 +7,7 @@ export default function Cards() {
       id: 1,
       title: "Abertura de solicitação",
       desc: "Abra uma solicitação e conte conosco para resolver qualquer necessidade ou dúvida. Estamos aqui para ajudar e garantir que você tenha a melhor experiência possível.",
-      icon: {
-        name: penIcon,
-        alt: "Pen Icon",
-      },
+      icon: <Cog8ToothIcon className="w-5 h-5 fill-black-50" />,
       button: {
         text: "Abrir solicitação",
         className: "",
@@ -24,10 +17,7 @@ export default function Cards() {
       id: 2,
       title: "Sugestões e feedbacks",
       desc: "Sua opinião é essencial para nós! Deixe suas sugestões e feedbacks para que possamos melhorar continuamente e oferecer a melhor experiência possível.",
-      icon: {
-        name: userHeart,
-        alt: "User Heart Icon",
-      },
+      icon: <Cog8ToothIcon className="w-5 h-5 fill-black-50" />,
       button: {
         text: "Enviar feedback",
         className:
@@ -54,11 +44,7 @@ export default function Cards() {
             <button
               className={`flex justify-center items-center gap-2 w-full px-4 py-3 bg-white text-black-100 rounded-lg hover:bg-white/80 transition-all duration-200 ${card.button.className}`}
             >
-              <Image
-                src={card.icon.name}
-                alt={card.icon.alt}
-                className="w-5 h-5"
-              />
+              {card.icon}
               <span className="font-inter font-semibold text-base text-black-100">
                 {card.button.text}
               </span>

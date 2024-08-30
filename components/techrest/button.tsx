@@ -1,7 +1,4 @@
-import Image from "next/image";
 import React from "react";
-
-import pen from "../../assets/icons/pen.svg";
 
 interface ButtonProps {
   variant:
@@ -24,7 +21,7 @@ interface ButtonProps {
 
   icon?: boolean;
   iconPosition?: "left" | "right";
-  iconSrc?: any;
+  iconSrc?: React.ReactNode;
 }
 
 export default function Button({
@@ -35,11 +32,11 @@ export default function Button({
   deactivatedStyle,
   ghostStyle,
   linkStyle,
-  text = "Botão sem conteúdo",
+  text = "Sem texto",
   textStyle,
   icon = false,
   iconPosition = "left",
-  iconSrc = pen,
+  iconSrc,
 }: ButtonProps) {
   return (
     <React.Fragment>
@@ -51,7 +48,7 @@ export default function Button({
             <React.Fragment>
               {iconPosition === "left" ? (
                 <div className="flex justify-center items-center gap-2">
-                  <Image src={iconSrc} alt="Icon" className="w-5 h-5" />
+                  {iconSrc}
                   <span
                     className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
                   >
@@ -65,7 +62,7 @@ export default function Button({
                   >
                     {text}
                   </span>
-                  <Image src={iconSrc} alt="Icon" className="w-5 h-5" />
+                  {iconSrc}
                 </div>
               )}
             </React.Fragment>
@@ -88,7 +85,7 @@ export default function Button({
               <React.Fragment>
                 {iconPosition === "left" ? (
                   <div className="flex justify-center items-center gap-2">
-                    <Image src={iconSrc} alt="Icon" className="w-5 h-5" />
+                    {iconSrc}
                     <span
                       className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
                     >
@@ -102,7 +99,7 @@ export default function Button({
                     >
                       {text}
                     </span>
-                    <Image src={iconSrc} alt="Icon" className="w-5 h-5" />
+                    {iconSrc}
                   </div>
                 )}
               </React.Fragment>
@@ -110,6 +107,43 @@ export default function Button({
               <div>
                 <span
                   className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
+                >
+                  {text}
+                </span>
+              </div>
+            )}
+          </button>
+        )) ||
+        (variant === "outline" && (
+          <button
+            className={`px-4 py-3 min-w-[22.3125rem] h-auto rounded-lg border border-white hover:bg-white hover:text-black-500 group hover:fill-black-50 transition-all duration-200 ${secondaryStyle}`}
+          >
+            {icon === true ? (
+              <React.Fragment>
+                {iconPosition === "left" ? (
+                  <div className="flex justify-center items-center gap-2">
+                    {iconSrc}
+                    <span
+                      className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
+                    >
+                      {text}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex justify-center items-center gap-2">
+                    <span
+                      className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
+                    >
+                      {text}
+                    </span>
+                    {iconSrc}
+                  </div>
+                )}
+              </React.Fragment>
+            ) : (
+              <div>
+                <span
+                  className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
                 >
                   {text}
                 </span>
