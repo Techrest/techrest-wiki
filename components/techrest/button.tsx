@@ -2,6 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   variant:
+    | string
     | "primary"
     | "secondary"
     | "outline"
@@ -79,7 +80,7 @@ export default function Button({
       )) ||
         (variant === "secondary" && (
           <button
-            className={`px-4 py-3 min-w-[22.3125rem] h-auto rounded-lg bg-sunset-500 hover:bg-sunset-400 transition-all duration-200 ${secondaryStyle}`}
+            className={`px-4 py-3 min-w-[22.3125rem] h-auto rounded-lg bg-sunset-500 hover:bg-sunset-400 fill-white text-white transition-all duration-200 ${secondaryStyle}`}
           >
             {icon === true ? (
               <React.Fragment>
@@ -87,7 +88,7 @@ export default function Button({
                   <div className="flex justify-center items-center gap-2">
                     {iconSrc}
                     <span
-                      className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
+                      className={`text-white text-base font-inter font-semibold ${textStyle}`}
                     >
                       {text}
                     </span>
@@ -95,7 +96,7 @@ export default function Button({
                 ) : (
                   <div className="flex justify-center items-center gap-2">
                     <span
-                      className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
+                      className={`text-white text-base font-inter font-semibold ${textStyle}`}
                     >
                       {text}
                     </span>
@@ -106,7 +107,7 @@ export default function Button({
             ) : (
               <div>
                 <span
-                  className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
+                  className={`text-white text-base font-inter font-semibold ${textStyle}`}
                 >
                   {text}
                 </span>
