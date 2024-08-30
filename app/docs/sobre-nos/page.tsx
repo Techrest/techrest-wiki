@@ -14,10 +14,12 @@ import Link from "next/link";
 import Button from "@/components/techrest/button";
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
+import { useButtons } from "@/hooks/useButtons";
 
 interface DocsProps {}
 
 export default function Docs({}: DocsProps) {
+  const { messages } = useButtons();
   return (
     <>
       <Header />
@@ -72,12 +74,15 @@ export default function Docs({}: DocsProps) {
           <div className="flex justify-start items-center gap-2">
             <Link href={`/docs`}>
               <Button
-                variant="primary"
+                variant="outline"
                 hasText={false}
+                text=""
                 width="[23rem]"
                 icon={true}
                 iconPosition="left"
-                iconSrc={<ChevronLeftIcon className="w-6 h-6 fill-black-50" />}
+                iconSrc={
+                  <ChevronLeftIcon className="w-6 h-6 fill-white hover:fill-black-50" />
+                }
                 primaryStyle="mt-14"
               />
             </Link>
@@ -85,7 +90,7 @@ export default function Docs({}: DocsProps) {
               <Button
                 variant="primary"
                 hasText={true}
-                text="Avançar para o próximo tópico"
+                text={messages.button.nextTitle}
                 width="[23rem]"
                 icon={true}
                 iconPosition="right"

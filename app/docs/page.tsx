@@ -13,10 +13,12 @@ import {
 import Button from "@/components/techrest/button";
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
+import { useButtons } from "@/hooks/useButtons";
 
 interface DocsProps {}
 
 export default function Docs({}: DocsProps) {
+  const { messages } = useButtons();
   return (
     <>
       <Header />
@@ -70,7 +72,7 @@ export default function Docs({}: DocsProps) {
             <Button
               variant="primary"
               hasText={true}
-              text="Avançar para o próximo tópico"
+              text={messages.button.nextTitle}
               width="[23rem]"
               icon={true}
               iconPosition="right"

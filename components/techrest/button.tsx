@@ -136,7 +136,7 @@ export default function Button({
         )) ||
         (variant === "outline" && (
           <button
-            className={`px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg border 
+            className={`px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg border-2 bg-transparent
             border-white fill-white text-white hover:bg-white hover:text-black-50 group hover:fill-black-50 transition-all duration-200 ${outlineStyle}`}
           >
             {icon === true ? (
@@ -144,19 +144,23 @@ export default function Button({
                 {iconPosition === "left" ? (
                   <div className="flex justify-center items-center gap-2">
                     {iconSrc}
-                    <span
-                      className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
-                    >
-                      {text}
-                    </span>
+                    {hasText === true ? (
+                      <span
+                        className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
+                      >
+                        {text}
+                      </span>
+                    ) : null}
                   </div>
                 ) : (
                   <div className="flex justify-center items-center gap-2">
-                    <span
-                      className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
-                    >
-                      {text}
-                    </span>
+                    {hasText === true ? (
+                      <span
+                        className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
+                      >
+                        {text}
+                      </span>
+                    ) : null}
                     {iconSrc}
                   </div>
                 )}
