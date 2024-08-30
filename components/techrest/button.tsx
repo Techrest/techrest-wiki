@@ -21,6 +21,7 @@ interface ButtonProps {
   maxWidth?: string;
   minWidth?: string;
 
+  hasText?: boolean;
   text?: string;
   textStyle?: string;
 
@@ -37,6 +38,7 @@ export default function Button({
   deactivatedStyle,
   ghostStyle,
   linkStyle,
+  hasText,
   text = "Sem texto",
   textStyle,
   icon = false,
@@ -58,19 +60,23 @@ export default function Button({
               {iconPosition === "left" ? (
                 <div className="flex justify-center items-center gap-2">
                   {iconSrc}
-                  <span
-                    className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
-                  >
-                    {text}
-                  </span>
+                  {hasText === true ? (
+                    <span
+                      className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
+                    >
+                      {text}
+                    </span>
+                  ) : null}
                 </div>
               ) : (
                 <div className="flex justify-center items-center gap-2">
-                  <span
-                    className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
-                  >
-                    {text}
-                  </span>
+                  {hasText === true ? (
+                    <span
+                      className={`text-black-50 text-base font-inter font-semibold ${textStyle}`}
+                    >
+                      {text}
+                    </span>
+                  ) : null}
                   {iconSrc}
                 </div>
               )}
@@ -96,19 +102,23 @@ export default function Button({
                 {iconPosition === "left" ? (
                   <div className="flex justify-center items-center gap-2">
                     {iconSrc}
-                    <span
-                      className={`text-white text-base font-inter font-semibold ${textStyle}`}
-                    >
-                      {text}
-                    </span>
+                    {hasText === true ? (
+                      <span
+                        className={`text-white text-base font-inter font-semibold ${textStyle}`}
+                      >
+                        {text}
+                      </span>
+                    ) : null}
                   </div>
                 ) : (
                   <div className="flex justify-center items-center gap-2">
-                    <span
-                      className={`text-white text-base font-inter font-semibold ${textStyle}`}
-                    >
-                      {text}
-                    </span>
+                    {hasText === true ? (
+                      <span
+                        className={`text-white text-base font-inter font-semibold ${textStyle}`}
+                      >
+                        {text}
+                      </span>
+                    ) : null}
                     {iconSrc}
                   </div>
                 )}
