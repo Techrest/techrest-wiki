@@ -10,7 +10,7 @@ interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
   return (
-    <header className="bg-black-100 w-full min-h-14 h-auto py-2 px-9 flex justify-between items-center">
+    <header className="bg-black-100 w-full min-h-14 h-auto py-2 px-9 flex justify-between items-center border-b border-[#27272A] ">
       <div className="flex justify-center items-center gap-9">
         <Image
           src={techrestLogo}
