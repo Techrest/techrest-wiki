@@ -71,19 +71,17 @@ export default function Docs({}: DocsProps) {
             </div>
           </div>
 
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex justify-start items-center gap-2 mt-14">
             <Link href={`/docs`}>
               <Button
                 variant="outline"
                 hasText={false}
-                text=""
                 width="[23rem]"
                 icon={true}
                 iconPosition="left"
                 iconSrc={
                   <ChevronLeftIcon className="w-6 h-6 fill-white hover:fill-black-50" />
                 }
-                primaryStyle="mt-14"
               />
             </Link>
             <Link href={`/docs/equipes`}>
@@ -95,7 +93,6 @@ export default function Docs({}: DocsProps) {
                 icon={true}
                 iconPosition="right"
                 iconSrc={<ChevronRightIcon className="w-6 h-6 fill-black-50" />}
-                primaryStyle="mt-14"
               />
             </Link>
           </div>
