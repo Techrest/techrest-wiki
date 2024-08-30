@@ -136,8 +136,8 @@ export default function Button({
         )) ||
         (variant === "outline" && (
           <button
-            className={`px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg border-2 bg-transparent
-            border-white fill-white text-white hover:bg-white hover:text-black-50 group hover:fill-black-50 transition-all duration-200 ${outlineStyle}`}
+            className={`px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg bg-transparent
+            border-2 border-solid border-white fill-white text-white hover:bg-white hover:text-black-50 group hover:fill-black-50 transition-all duration-200 ${outlineStyle}`}
           >
             {icon === true ? (
               <React.Fragment>
