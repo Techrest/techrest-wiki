@@ -12,11 +12,11 @@ export default function Docs({}: DocsProps) {
       <Header />
 
       <Button
-        variant="outline"
+        variant="primary"
         text="Editar publicação"
         icon={true}
         iconSrc={
-          <PencilSquareIcon className="w-5 h-5 fill-white group-hover:fill-black-50" />
+          <PencilSquareIcon className="w-5 h-5 fill-current group-hover:fill-black-50" />
         }
         iconPosition="left"
       />

@@ -50,7 +50,7 @@ export default function Button({
     <React.Fragment>
       {(variant === "primary" && (
         <button
-          className={`px-4 py-3 w-[${width}] lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg 
+          className={`px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg 
           bg-white hover:bg-white/80 transition-all duration-200 ${primaryStyle}`}
         >
           {icon === true ? (
@@ -88,7 +88,7 @@ export default function Button({
       )) ||
         (variant === "secondary" && (
           <button
-            className={`px-4 py-3 w-[${width}] lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg 
+            className={`px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg 
             bg-sunset-500 hover:bg-sunset-400 fill-white text-white transition-all duration-200 ${secondaryStyle}`}
           >
             {icon === true ? (
@@ -126,8 +126,8 @@ export default function Button({
         )) ||
         (variant === "outline" && (
           <button
-            className={`px-4 py-3 w-[${width}] lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg border 
-            border-white hover:bg-white hover:text-black-500 group hover:fill-black-50 transition-all duration-200 ${outlineStyle}`}
+            className={`px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg border 
+            border-white fill-white text-white hover:bg-white hover:text-black-50 group hover:fill-black-50 transition-all duration-200 ${outlineStyle}`}
           >
             {icon === true ? (
               <React.Fragment>
@@ -155,6 +155,42 @@ export default function Button({
               <div>
                 <span
                   className={`text-white group-hover:text-black-50 group-hover:fill-black-50 text-base font-inter font-semibold ${textStyle}`}
+                >
+                  {text}
+                </span>
+              </div>
+            )}
+          </button>
+        )) ||
+        (variant === "deactivated" && (
+          <button
+            className={`cursor-not-allowed px-4 py-3 w-${width} lg:min-w-[${minWidth}] lg:max-w-[${maxWidth}] h-auto rounded-lg border 
+            bg-deactivated-50 text-deactivated-100 transition-all duration-200 ${deactivatedStyle}`}
+          >
+            {icon === true ? (
+              <React.Fragment>
+                {iconPosition === "left" ? (
+                  <div className="flex justify-center items-center gap-2">
+                    <span
+                      className={`text-deactivated-100 text-base font-inter font-semibold ${textStyle}`}
+                    >
+                      {text}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex justify-center items-center gap-2">
+                    <span
+                      className={`text-deactivated-100 text-base font-inter font-semibold ${textStyle}`}
+                    >
+                      {text}
+                    </span>
+                  </div>
+                )}
+              </React.Fragment>
+            ) : (
+              <div>
+                <span
+                  className={`text-deactivated-100 text-base font-inter font-semibold ${textStyle}`}
                 >
                   {text}
                 </span>
