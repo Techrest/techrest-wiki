@@ -1,24 +1,18 @@
 import React from "react";
-import { Cog8ToothIcon } from "@heroicons/react/16/solid";
+import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/16/solid";
+import Button from "../techrest/button";
 
 export default function Cards() {
   const data = [
     {
       id: 1,
-      title: "Abertura de solicitação",
-      desc: "Abra uma solicitação e conte conosco para resolver qualquer necessidade ou dúvida. Estamos aqui para ajudar e garantir que você tenha a melhor experiência possível.",
-      icon: <Cog8ToothIcon className="w-5 h-5 fill-black-50" />,
-      button: {
-        text: "Abrir solicitação",
-        className: "",
-      },
-    },
-    {
-      id: 2,
       title: "Sugestões e feedbacks",
       desc: "Sua opinião é essencial para nós! Deixe suas sugestões e feedbacks para que possamos melhorar continuamente e oferecer a melhor experiência possível.",
-      icon: <Cog8ToothIcon className="w-5 h-5 fill-black-50" />,
+      icon: (
+        <ChatBubbleBottomCenterTextIcon className="w-5 h-5 fill-black-50" />
+      ),
       button: {
+        variant: "primary",
         text: "Enviar feedback",
         className:
           "bg-sunset-500 hover:bg-sunset-300 transition-all duration-200",
@@ -41,14 +35,13 @@ export default function Cards() {
               </p>
             </div>
             {/* Botão de ação do cartão */}
-            <button
-              className={`flex justify-center items-center gap-2 w-full px-4 py-3 bg-white text-black-100 rounded-lg hover:bg-white/80 transition-all duration-200 ${card.button.className}`}
-            >
-              {card.icon}
-              <span className="font-inter font-semibold text-base text-black-100">
-                {card.button.text}
-              </span>
-            </button>
+            <Button
+              variant={card.button.variant}
+              text={card.button.text}
+              iconPosition="left"
+              icon={true}
+              iconSrc={card.icon}
+            />
           </div>
         </React.Fragment>
       ))}
