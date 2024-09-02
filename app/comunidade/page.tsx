@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "../../components/header";
-import locker from "../../assets/icons/locker.svg";
+// import locker from "../../assets/icons/locker.svg";
 import Image from "next/image";
-import git from "../../assets/icons/github.svg";
-import gift from "../../assets/icons/gift.svg";
-import arrow from "../../assets/icons/arrow.svg";
+// import git from "../../assets/icons/github.svg";
+// import gift from "../../assets/icons/gift.svg";
+// import arrow from "../../assets/icons/arrow.svg";
 
 interface CommunityProps {}
 
@@ -23,7 +23,7 @@ export default function Community({}: CommunityProps) {
           </p>
 
           <div className="flex gap-2 mt-6">
-            <Image src={locker} alt="Locker icon" className="w-6 h-6" />
+            {/* <Image src={locker} alt="Locker icon" className="w-6 h-6" /> */}
             <p className="text-[#f2f2f2] text-lg font-normal mb-7">
               O acesso a comunidade é restrito somente aos participantes do
               projeto Techrest.
@@ -50,7 +50,7 @@ export default function Community({}: CommunityProps) {
 
         <section className="flex gap-4 mx-28 mt-10 border-b border-black-300">
           <button className="flex gap-2 justify-center items-center bg-[#f2f2f2] px-4 py-3 w-80 h-11 rounded-lg">
-            <Image src={git} alt="GitHub icon" className="w-6 h-6" />
+            {/* <Image src={git} alt="GitHub icon" className="w-6 h-6" /> */}
             <p className="text-[#191919] text-base font-medium leading-none">
               Acessar utilizando GitHub
             </p>
@@ -75,7 +75,7 @@ export default function Community({}: CommunityProps) {
                 preencher o formulário de inscrição.
               </p>
               <button className="flex gap-2 justify-center items-center bg-[#f2f2f2] rounded-lg px-4 py-3 w-80 h-11 mt-6">
-                <Image src={gift} alt="icone de presente" className="w-6 h-6" />
+                {/* <Image src={gift} alt="icone de presente" className="w-6 h-6" /> */}
                 <p className="text-[#191919] text-base font-medium">
                   Convite de acesso
                 </p>
@@ -109,7 +109,7 @@ export default function Community({}: CommunityProps) {
                 <p className="text-[#f2f2f2] text-base font-medium">
                   Vagas disponíveis
                 </p>
-                <Image src={arrow} alt="Seta" className="w-6 h-6" />
+                {/* <Image src={arrow} alt="Seta" className="w-6 h-6" /> */}
               </button>
             </div>
           </div>
