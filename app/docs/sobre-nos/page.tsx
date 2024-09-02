@@ -27,7 +27,6 @@ export default function Docs({}: DocsProps) {
       <Sidebar topic="sobre-nos" />
 
       {/* Conteúdo principal que será renderizado */}
-      {/* Conteúdo principal que será renderizado */}
       <main className="pl-60 w-full">
         <div className="text-white fill-white p-8 max-w-[1440px]">
           <Breadcrumb className="text-white fill-white">
