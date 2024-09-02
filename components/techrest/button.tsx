@@ -21,7 +21,7 @@ interface ButtonProps {
   maxWidth?: string;
   minWidth?: string;
 
-  hasText?: boolean;
+  hasText: boolean;
   text?: string;
   textStyle?: string;
 
