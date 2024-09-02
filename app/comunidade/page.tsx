@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../../components/header";
 // import locker from "../../assets/icons/locker.svg";
 import Image from "next/image";
+import Button from "@/components/techrest/button";
+import { EnvelopeOpenIcon } from "@heroicons/react/16/solid";
 // import git from "../../assets/icons/github.svg";
 // import gift from "../../assets/icons/gift.svg";
 // import arrow from "../../assets/icons/arrow.svg";
@@ -74,12 +76,14 @@ export default function Community({}: CommunityProps) {
                 Para receber um convite, você deverá clicar no botão abaixo e
                 preencher o formulário de inscrição.
               </p>
-              <button className="flex gap-2 justify-center items-center bg-[#f2f2f2] rounded-lg px-4 py-3 w-80 h-11 mt-6">
-                {/* <Image src={gift} alt="icone de presente" className="w-6 h-6" /> */}
-                <p className="text-[#191919] text-base font-medium">
-                  Convite de acesso
-                </p>
-              </button>
+              <Button
+                variant="primary"
+                icon={true}
+                hasText={true}
+                text="Receber um convite"
+                iconPosition="left"
+                iconSrc={<EnvelopeOpenIcon className="w-5 h-5 fill-content" />}
+              />
             </div>
 
             <div className="border border-black-300 rounded-lg bg-black-50 flex flex-col items-start w-96 h-44">
