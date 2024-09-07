@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export const useFeedBack = () => { 
 
   const [selectedOpnion, setSelectedOpnion] = useState(0);
   const [selectSatisfy, setSelectSatisfy] = useState(0);
+
+  const {handleSubmit, register, reset } = useForm({ mode: "onBlur" });
 
   const selectOpnion = (number: number) => {
     switch (number) {
@@ -50,5 +53,12 @@ export const useFeedBack = () => {
   }
 
   
-  return {selectOpnion, selectedOpnion, selectSatisfy, selectSatisfyOption};
+  return {
+    selectOpnion,
+    selectedOpnion,
+    selectSatisfy,
+    selectSatisfyOption,
+    handleSubmit,
+    register,
+  };
 }
