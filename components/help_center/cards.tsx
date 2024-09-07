@@ -41,6 +41,7 @@ export default function Cards() {
               iconPosition="left"
               icon={true}
               iconSrc={card.icon}
+              hasText={false}
             />
           </div>
         </React.Fragment>

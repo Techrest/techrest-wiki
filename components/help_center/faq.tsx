@@ -20,7 +20,7 @@ export default function Faq() {
       <div className="flex flex-col justify-center items-center w-full">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1" className="border-b border-black-300">
-            <AccordionTrigger className="text-lg hover:no-underline">
+            <AccordionTrigger className="text-lg hover:no-underline text-white">
               Como posso conectar a minha conta Techrest em outras redes
               sociais?
             </AccordionTrigger>
@@ -38,7 +38,7 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2" className="border-b border-black-300">
-            <AccordionTrigger className="text-lg hover:no-underline">
+            <AccordionTrigger className="text-lg hover:no-underline text-white">
               Esqueci a minha senha, como faço para acessar a minha conta?
             </AccordionTrigger>
             <AccordionContent className="text-white/50 font-inter font-normal text-base">
@@ -55,7 +55,7 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3" className="border-b border-black-300">
-            <AccordionTrigger className="text-lg hover:no-underline">
+            <AccordionTrigger className="text-lg hover:no-underline text-white">
               Como posso alterar o e-mail da minha conta?
             </AccordionTrigger>
             <AccordionContent className="text-white/50 font-inter font-normal text-base">
