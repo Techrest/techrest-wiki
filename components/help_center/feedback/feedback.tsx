@@ -2,8 +2,15 @@ import React from "react";
 import { useFeedBack } from "./hook/useFeedback";
 
 export default function Feedback() {
-  const { selectOpnion, selectedOpnion, selectSatisfy, selectSatisfyOption } =
-    useFeedBack();
+  const {
+    selectOpnion,
+    selectedOpnion,
+    selectSatisfy,
+    selectSatisfyOption,
+    handleSubmit,
+    onSubmitForm,
+    register,
+  } = useFeedBack();
   return (
     <React.Fragment>
       <main className="felx flex-col items-center justify-center text-center text-white font-manrope">
@@ -22,7 +29,10 @@ export default function Feedback() {
           </div>
         </section>
         <section className="flex flex-col gap-9 mb-9">
-          <form className="flex flex-col text-center items-center justify-center gap-4">
+          <form
+            onSubmit={handleSubmit(onSubmitForm)}
+            className="flex flex-col text-center items-center justify-center gap-4"
+          >
             <div className="flex flex-col gap-9">
               <h1 className="text-xl font-medium">
                 O quão satisfeito você está com a interface da nossa plataforma?
@@ -137,6 +147,7 @@ export default function Feedback() {
               placeholder="Digite sua mensagem aqui..."
               cols={100}
               rows={10}
+              {...register("userMessage", { required: true })}
             />
             <button
               className="bg-white text-black-200 font-medium text-base font-inter max-w-[1030px] w-full rounded-xl px-2 py-4"

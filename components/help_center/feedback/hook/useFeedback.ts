@@ -52,6 +52,15 @@ export const useFeedBack = () => {
     }
   }
 
+  const onSubmitForm = (data: object) => {
+    const userFeedBack = {
+      selectOpnion,
+      selectSatisfy,
+      ...data
+    }
+    reset()
+    return userFeedBack;
+  }
   
   return {
     selectOpnion,
@@ -60,5 +69,6 @@ export const useFeedBack = () => {
     selectSatisfyOption,
     handleSubmit,
     register,
+    onSubmitForm
   };
 }
