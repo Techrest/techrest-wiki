@@ -54,11 +54,11 @@ export const useFeedBack = () => {
 
   const onSubmitForm = (data: object) => {
     const userFeedBack = {
-      selectOpnion,
+      selectedOpnion,
       selectSatisfy,
       ...data
-    }
-    reset()
+    };
+    reset();
     return userFeedBack;
   }
   
