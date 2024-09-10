@@ -3,8 +3,9 @@ import { useForm } from "react-hook-form";
 
 export const useFeedBack = () => { 
 
-  const [selectedOpnion, setSelectedOpnion] = useState(0);
-  const [selectSatisfy, setSelectSatisfy] = useState(0);
+  const [selectedOpnion, setSelectedOpnion] = useState<number>(0);
+  const [selectSatisfy, setSelectSatisfy] = useState<number>(0);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const {handleSubmit, register, reset } = useForm({ mode: "onBlur" });
 
@@ -59,16 +60,19 @@ export const useFeedBack = () => {
       ...data
     };
     reset();
+    setIsOpen(!isOpen);
     return userFeedBack;
   }
   
   return {
-    selectOpnion,
     selectedOpnion,
     selectSatisfy,
+    isOpen,
+    selectOpnion,
     selectSatisfyOption,
     handleSubmit,
     register,
-    onSubmitForm
+    onSubmitForm,
+    setIsOpen
   };
 }

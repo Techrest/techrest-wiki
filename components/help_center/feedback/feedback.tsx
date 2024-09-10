@@ -1,15 +1,19 @@
 import React from "react";
+import Image from "next/image";
+import RatingImg from "@/assets/rating.svg";
 import { useFeedBack } from "./hook/useFeedback";
 
 export default function Feedback() {
   const {
-    selectOpnion,
     selectedOpnion,
     selectSatisfy,
+    isOpen,
+    selectOpnion,
     selectSatisfyOption,
     handleSubmit,
     onSubmitForm,
     register,
+    setIsOpen,
   } = useFeedBack();
   return (
     <React.Fragment>
@@ -29,133 +33,164 @@ export default function Feedback() {
           </div>
         </section>
         <section className="flex flex-col gap-9 mb-9">
-          <form
-            onSubmit={handleSubmit(onSubmitForm)}
-            className="flex flex-col text-center items-center justify-center gap-4"
-          >
-            <div className="flex flex-col gap-9">
-              <h1 className="text-xl font-medium">
-                O quão satisfeito você está com a interface da nossa plataforma?
-              </h1>
-              <ul className="flex text-center items-center justify-center gap-4">
-                <li
-                  onClick={() => selectOpnion(1)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+          {isOpen === false ? (
+            <form
+              onSubmit={handleSubmit(onSubmitForm)}
+              className="flex flex-col text-center items-center justify-center gap-4"
+            >
+              <div className="flex flex-col gap-9">
+                <h1 className="text-xl font-medium">
+                  O quão satisfeito você está com a interface da nossa
+                  plataforma?
+                </h1>
+                <ul className="flex text-center items-center justify-center gap-4">
+                  <li
+                    onClick={() => selectOpnion(1)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectedOpnion === 1 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  1
-                </li>
-                <li
-                  onClick={() => selectOpnion(2)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    1
+                  </li>
+                  <li
+                    onClick={() => selectOpnion(2)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectedOpnion === 2 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  2
-                </li>
-                <li
-                  onClick={() => selectOpnion(3)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    2
+                  </li>
+                  <li
+                    onClick={() => selectOpnion(3)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectedOpnion === 3 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  3
-                </li>
-                <li
-                  onClick={() => selectOpnion(4)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    3
+                  </li>
+                  <li
+                    onClick={() => selectOpnion(4)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectedOpnion === 4 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  4
-                </li>
-                <li
-                  onClick={() => selectOpnion(5)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    4
+                  </li>
+                  <li
+                    onClick={() => selectOpnion(5)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectedOpnion === 5 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  5
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-9 mb-9">
-              <h1 className="text-xl font-medium">
-                O quão satisfeito você está com as funcionalidades da nossa
-                plataforma?
-              </h1>
-              <ul className="flex text-center items-center justify-center gap-4">
-                <li
-                  onClick={() => selectSatisfyOption(1)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    5
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col gap-9 mb-9">
+                <h1 className="text-xl font-medium">
+                  O quão satisfeito você está com as funcionalidades da nossa
+                  plataforma?
+                </h1>
+                <ul className="flex text-center items-center justify-center gap-4">
+                  <li
+                    onClick={() => selectSatisfyOption(1)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectSatisfy === 1 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  1
-                </li>
-                <li
-                  onClick={() => selectSatisfyOption(2)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    1
+                  </li>
+                  <li
+                    onClick={() => selectSatisfyOption(2)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectSatisfy === 2 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  2
-                </li>
-                <li
-                  onClick={() => selectSatisfyOption(3)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    2
+                  </li>
+                  <li
+                    onClick={() => selectSatisfyOption(3)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectSatisfy === 3 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  3
-                </li>
-                <li
-                  onClick={() => selectSatisfyOption(4)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    3
+                  </li>
+                  <li
+                    onClick={() => selectSatisfyOption(4)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectSatisfy === 4 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
-                >
-                  4
-                </li>
-                <li
-                  onClick={() => selectSatisfyOption(5)}
-                  className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
+                  >
+                    4
+                  </li>
+                  <li
+                    onClick={() => selectSatisfyOption(5)}
+                    className={`px-5 py-2 rounded-md border-2 border-black-300 font-bold text-lg
                     ${
                       selectSatisfy === 5 && "bg-sunset-500"
                     } hover:bg-sunset-500 duration-300 cursor-pointer `}
+                  >
+                    5
+                  </li>
+                </ul>
+              </div>
+              <h1 className="text-xl font-medium">
+                Encontrou algum problema técnico ao usar nosso site ou há algo
+                que você acha que poderíamos melhorar?
+              </h1>
+              <textarea
+                className="bg-black-50 text-white/50 text-xl max-w-[1030px] w-full font-medium rounded-md border-2 border-black-300 p-7"
+                placeholder="Digite sua mensagem aqui..."
+                cols={100}
+                rows={10}
+                {...register("userMessage", { required: true })}
+              />
+              <button
+                className="bg-white text-black-200 font-medium text-base font-inter max-w-[1030px] w-full rounded-xl px-2 py-4"
+                type="submit"
+              >
+                Realizar o envio da sua sugestão
+              </button>
+            </form>
+          ) : (
+            <section className="flex flex-col justify-center items-center text-center">
+              <div>
+                <figure>
+                  <Image
+                    src={RatingImg}
+                    alt="Imagem do feedback enviado"
+                  ></Image>
+                </figure>
+              </div>
+              <div className="pb-16">
+                <h1 className="text-5xl font-bold tracking-normal leading-normal font-manrope">
+                  Agradecemos!
+                </h1>
+                <p className="text-lg font-normal font-inter leading-normal">
+                  A sua opinião é extremamente importante para nós, com ela nós
+                  podemos melhorar a Techrest para você.
+                </p>
+              </div>
+              <div>
+                <button
+                  className="py-2 px-4 bg-sunset-500 rounded-md font-inter text-sm font-medium leading-relaxed"
+                  onClick={() => setIsOpen(!isOpen)}
                 >
-                  5
-                </li>
-              </ul>
-            </div>
-            <h1 className="text-xl font-medium">
-              Encontrou algum problema técnico ao usar nosso site ou há algo que
-              você acha que poderíamos melhorar?
-            </h1>
-            <textarea
-              className="bg-black-50 text-white/50 text-xl max-w-[1030px] w-full font-medium rounded-md border-2 border-black-300 p-7"
-              placeholder="Digite sua mensagem aqui..."
-              cols={100}
-              rows={10}
-              {...register("userMessage", { required: true })}
-            />
-            <button
-              className="bg-white text-black-200 font-medium text-base font-inter max-w-[1030px] w-full rounded-xl px-2 py-4"
-              type="submit"
-            >
-              Realizar o envio da sua sugestão
-            </button>
-          </form>
+                  Deseja enviar outra sugestão?
+                </button>
+              </div>
+            </section>
+          )}
         </section>
       </main>
     </React.Fragment>
