@@ -32,6 +32,8 @@ export default function Ajuda() {
           pageTitle="Perguntas Frequentes"
           descActivated={true}
           desc={helpDesc}
+          titleStyle="text-sunset-500 text-center"
+          descStyle="text-lg text-center"
         />
         {/* Seção de dúvidas frequentes */}
         <Faq />
