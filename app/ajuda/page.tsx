@@ -22,7 +22,7 @@ export default function Ajuda() {
   return (
     <React.Fragment>
       <Header />
-      <figure className="bg-white w-full max-h-96">
+      <figure className="bg-white w-full max-h-96 mb-[93px]">
         <Image src={HelpLogo} alt="Logo da página de ajuda" />
       </figure>
       {/* Seção principal da página */}
@@ -32,13 +32,31 @@ export default function Ajuda() {
           pageTitle="Perguntas Frequentes"
           descActivated={true}
           desc={helpDesc}
-          titleStyle="text-sunset-500 text-center"
+          titleStyle="text-sunset-500 text-center "
           descStyle="text-lg text-center"
         />
         {/* Seção de dúvidas frequentes */}
-        <Faq titleContent="Duvidas frquentes" descExist={false} />
-        <Faq titleContent="Perguntas sobre a comunidade" />
-        <Faq titleContent="Perguntas sobre colaboração" />
+        <div className="flex flex-col w-full mt-[76px] gap-[76px]">
+          <Faq
+            titleContent="Perguntas gerais"
+            descExist={false}
+            titelStyle="text-sunset-500 uppercase text-base"
+            triggerStyle="text-sm font-normal leading-5"
+            contentStyle="text-sm font-normal leading-5"
+          />
+          <Faq
+            titleContent="Perguntas sobre a comunidade"
+            titelStyle="text-sunset-500 uppercase text-base"
+            triggerStyle="text-sm font-normal leading-5"
+            contentStyle="text-sm font-normal leading-5"
+          />
+          <Faq
+            titleContent="Perguntas sobre colaboração"
+            titelStyle="text-sunset-500 uppercase text-base"
+            triggerStyle="text-sm font-normal leading-5"
+            contentStyle="text-sm font-normal leading-5"
+          />
+        </div>
         {/* Seção de contato para duvidas para o email */}
         <Contact />
         {/*Seção de feedback e sujestão */}

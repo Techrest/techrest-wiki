@@ -21,10 +21,10 @@ export default function Faq({
   descExist,
 }: FaqProps) {
   return (
-    <section className="flex flex-col justify-center items-center md:items-start gap-6 text-center md:text-left">
+    <section className="flex flex-col justify-center items-center w-full md:items-center gap-6 text-center md:text-left">
       <div>
         <h1
-          className={`font-manrope text-2xl leading-normal text-white font-bold text-left ${titelStyle}`}
+          className={`font-manrope text-2xl leading-normal font-bold ${titelStyle}`}
         >
           {titleContent}
         </h1>
@@ -35,7 +35,7 @@ export default function Faq({
           </p>
         )}
       </div>
-      <div className="flex flex-col justify-center items-center w-full">
+      <div className="flex flex-col justify-center items-center gap-8 w-full">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1" className="border-b border-black-300">
             <AccordionTrigger
