@@ -5,26 +5,48 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 
-export default function Faq() {
+interface FaqProps {
+  triggerStyle?: string;
+  contentStyle?: string;
+  titelStyle?: string;
+  titleContent: string;
+  descExist?: boolean;
+}
+
+export default function Faq({
+  triggerStyle,
+  contentStyle,
+  titelStyle,
+  titleContent,
+  descExist,
+}: FaqProps) {
   return (
     <section className="flex flex-col justify-center items-center md:items-start gap-6 text-center md:text-left">
       <div>
-        <h1 className="font-manrope text-2xl leading-normal text-white font-bold text-left">
-          Dúvidas Frequentes
+        <h1
+          className={`font-manrope text-2xl leading-normal text-white font-bold text-left ${titelStyle}`}
+        >
+          {titleContent}
         </h1>
-        <p className="font-inter font-normal tracking-[-0.0225rem] leading-normal text-white/50 text-base text-left">
-          Antes de realizar uma abertura de chamado no suporte, verifique se a
-          sua dúvida está nesta seção.
-        </p>
+        {descExist === true && (
+          <p className="font-inter font-normal tracking-[-0.0225rem] leading-normal text-white/50 text-base text-left">
+            Antes de realizar uma abertura de chamado no suporte, verifique se a
+            sua dúvida está nesta seção.
+          </p>
+        )}
       </div>
       <div className="flex flex-col justify-center items-center w-full">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1" className="border-b border-black-300">
-            <AccordionTrigger className="text-lg hover:no-underline text-white">
+            <AccordionTrigger
+              className={`text-lg hover:no-underline text-white ${triggerStyle}`}
+            >
               Como posso conectar a minha conta Techrest em outras redes
               sociais?
             </AccordionTrigger>
-            <AccordionContent className="text-white/50 font-inter font-normal text-base">
+            <AccordionContent
+              className={`text-white/50 font-inter font-normal text-base ${contentStyle}`}
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -38,10 +60,14 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2" className="border-b border-black-300">
-            <AccordionTrigger className="text-lg hover:no-underline text-white">
+            <AccordionTrigger
+              className={`text-lg hover:no-underline text-white ${triggerStyle}`}
+            >
               Esqueci a minha senha, como faço para acessar a minha conta?
             </AccordionTrigger>
-            <AccordionContent className="text-white/50 font-inter font-normal text-base">
+            <AccordionContent
+              className={`text-white/50 font-inter font-normal text-base ${contentStyle}`}
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -55,10 +81,14 @@ export default function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3" className="border-b border-black-300">
-            <AccordionTrigger className="text-lg hover:no-underline text-white">
+            <AccordionTrigger
+              className={`text-lg hover:no-underline text-white ${triggerStyle}`}
+            >
               Como posso alterar o e-mail da minha conta?
             </AccordionTrigger>
-            <AccordionContent className="text-white/50 font-inter font-normal text-base">
+            <AccordionContent
+              className={`text-white/50 font-inter font-normal text-base ${contentStyle}`}
+            >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of

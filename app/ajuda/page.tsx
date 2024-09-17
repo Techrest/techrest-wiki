@@ -36,9 +36,9 @@ export default function Ajuda() {
           descStyle="text-lg text-center"
         />
         {/* Seção de dúvidas frequentes */}
-        <Faq />
-        <Faq />
-        <Faq />
+        <Faq titleContent="Duvidas frquentes" descExist={false} />
+        <Faq titleContent="Perguntas sobre a comunidade" />
+        <Faq titleContent="Perguntas sobre colaboração" />
         {/* Seção de contato para duvidas para o email */}
         <Contact />
         {/*Seção de feedback e sujestão */}
