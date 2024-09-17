@@ -60,6 +60,8 @@ export const useFeedBack = () => {
       ...data
     };
     reset();
+    setSelectedOpnion(0);
+    setSelectSatisfy(0);
     setIsOpen(!isOpen);
     return userFeedBack;
   }
